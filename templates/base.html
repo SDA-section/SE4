@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>{{ title }}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+        {% if style%}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/' + style)}}">
+        {% endif%}
+    </head> 
+    <body>
+        <header>
+            <h1>Flask App</h1>
+        </header>
+        <main>
+           {% block body %}
+           {% endblock %}
+        </main>
+        <footer>
+            All right Reserved @copy; 2025
+        </footer>
+        <script src="{{url_for('static',filename="js/main.js")}}"></script>
+    </body>
+</html>
